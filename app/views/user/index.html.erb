@@ -1,0 +1,8 @@
+<h4>You are successfully Loged-IN</h4>
+<% if test_signed_in?%>
+  <h3>Your email is <%=current_test.email%></h3>  
+  <%=link_to "Sign_Out",destroy_test_session_path,data: {
+    turbo_method: :delete
+  }%>
+
+<%end %>
